@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata, ResolvingMetadata } from 'next'
 // import { GoogleTagManager } from '@next/third-parties/google'
+import Navbar from '../../components/navbar';
 
 type Props = {
     params: { slug: string }
@@ -16,13 +17,7 @@ export async function generateMetadata(
     }
 }
 
-async function getData() {
-    const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/quotes/authors-new.json')
-    if (!res.ok) {
-        throw new Error('Failed to fetch data')
-    }
-    return res.json()
-}
+async function getData() {const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/quotes/authors-new.json'); if (!res.ok) {throw new Error('Failed to fetch data')}return res.json()}
 
 export default async function authors({ params }: { params: { slug: string } }) {
     const data = await getData()
@@ -42,7 +37,7 @@ export default async function authors({ params }: { params: { slug: string } }) 
         <html lang='en'>
             <body>
                 {/* <GoogleTagManager gtmId="GTM-PDHR5KXB" /> */}
-                {/* <Navbar /> */}
+                <Navbar />
                 <div className='author-detail-container'>
                     {filteredData.map((item: any) => (
                         <main className='author-detail-main' key={item.id}>
