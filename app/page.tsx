@@ -27,7 +27,8 @@ export default async function Home() {
                   authorsData.map((item: any) =>
                     item.en_quotes !== "" && item.img != null ?
                       (
-                        <div className="demo" ><Link href={"/authors/" + item.id + "-quotes"}>
+                        <div className="demo" key={item.id}>
+                          <Link href={"/authors/" + item.id + "-quotes"}>
                           <img
                             src={item.img}
                             alt={item.name + ' ' + item.surname}
