@@ -50,7 +50,7 @@ export default async function Home() {
                 {
                   wordsData.map((item: any) =>
                   (
-                    <div className="demo" ><Link href={"/words/" + item.id}><span>{item.word}</span> <p>{item.en_meta_desc}</p></Link></div>
+                    <div className="demo" key={item.id}><Link href={"/words/" + item.id}><span>{item.word}</span> <p>{item.en_meta_desc}</p></Link></div>
                   )
                   )
                 }
@@ -62,7 +62,7 @@ export default async function Home() {
                   {
                     preverbsData.map((item: any) =>
                     (
-                      <div className="demo" ><Link href={"/preverbs/" + item.id}>
+                      <div className="demo" key={item.id}><Link href={"/preverbs/" + item.id}>
                         <span>{item.preverb}</span>
                       </Link></div>
                     )
