@@ -16,6 +16,34 @@ Macy({
         1200: 5,
         940: 3,
         520: 2,
-        400: 1
+        400: 2
+    }
+});
+
+Macy({
+    container: '#word-container',
+    trueOrder: false,
+    waitForImages: false,
+    margin: 16,
+    columns: 6,
+    breakAt: {
+        1200: 5,
+        940: 3,
+        520: 2,
+        400: 2
+    }
+});
+
+Macy({
+    container: '#preverbs-container',
+    trueOrder: false,
+    waitForImages: false,
+    margin: 16,
+    columns: 6,
+    breakAt: {
+        1200: 5,
+        940: 3,
+        520: 2,
+        400: 2
     }
 });
