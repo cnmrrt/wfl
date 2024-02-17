@@ -10,7 +10,7 @@ Macy({
     container: '#macy-container',
     trueOrder: false,
     waitForImages: false,
-    margin: 24,
+    margin: 16,
     columns: 6,
     breakAt: {
         1200: 5,
