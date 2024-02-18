@@ -2,10 +2,24 @@ import Image from "next/image";
 import Link from 'next/link';
 import Script from 'next/script'
 import Navbar from './components/navbar';
+import type { Metadata } from 'next';
+// import { GoogleTagManager } from '@next/third-parties/google';
+
+
 
 async function getAuthors() { const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/quotes/authors-new.json'); if (!res.ok) { throw new Error('Failed to fetch data') } return res.json() }
 async function getWords() { const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/words.json'); if (!res.ok) { throw new Error('Failed to fetch data') } return res.json() }
 async function getPreverbs() { const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/idioms%20and%20proverbs/en/preverbs.json'); if (!res.ok) { throw new Error('Failed to fetch data') } return res.json() }
+
+
+
+export const metadata: Metadata = {
+  title: 'Words From Life',
+  description: '',
+  alternates: {
+    canonical: "https://wordsfromlife.com/",
+  }
+}
 
 
 export default async function Home() {
