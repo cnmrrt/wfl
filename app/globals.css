@@ -17,6 +17,7 @@ a {
     display: flex;
 }
 #navbar li {
+    padding: 0.5rem 0.75rem;
     list-style: none;
 }
 
