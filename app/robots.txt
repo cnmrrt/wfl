@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: *[slug]*
+Sitemap: https://wordsfromlife.com/sitemap.xml
