@@ -6,6 +6,7 @@ import Navbar from '../../components/navbar';
 type Props = {
     params: { slug: string }
 }
+async function getData() {const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/quotes/authors-new.json'); if (!res.ok) {throw new Error('Failed to fetch data')}return res.json()}
 
 export async function generateMetadata(
     { params }: Props,
@@ -40,11 +41,10 @@ export async function generateMetadata(
                 ],
             type: 'website',
           },
-          
+
     }
 }
 
-async function getData() {const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/quotes/authors-new.json'); if (!res.ok) {throw new Error('Failed to fetch data')}return res.json()}
 
 export default async function authors({ params }: { params: { slug: string } }) {
     const data = await getData()
