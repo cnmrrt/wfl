@@ -194,6 +194,11 @@ module.exports = {
                 source: "/virginia-woolf-quotes",
                 destination: "/authors/virginia-woolf-quotes",
                 "statusCode": 301,
+            },
+            {
+                source: "/wolfgang-amadeus-mozart-quotes",
+                destination: "/authors/wolfgang-amadeus-mozart-quotes",
+                "statusCode": 301,
             }
         ]
     },
