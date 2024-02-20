@@ -16,7 +16,7 @@ export async function generateMetadata(
     const filteredData = data.filter((item: any) => (item.id).toLowerCase() + "-quotes" === params.slug);
     const name = filteredData[0].name;
     const surname = filteredData[0].surname;
-    const img = filteredData[0].img;
+    const img = "https://wordsfromlife.com" + filteredData[0].img;
     const img_width = filteredData[0].img_width;
     const img_height = filteredData[0].img_height;
 
