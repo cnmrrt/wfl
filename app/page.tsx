@@ -11,8 +11,6 @@ async function getAuthors() { const res = await fetch('https://words-from-life-5
 async function getWords() { const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/words.json'); if (!res.ok) { throw new Error('Failed to fetch data') } return res.json() }
 async function getPreverbs() { const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/idioms%20and%20proverbs/en/preverbs.json'); if (!res.ok) { throw new Error('Failed to fetch data') } return res.json() }
 
-
-
 export const metadata: Metadata = {
   title: 'Words From Life',
   description: '',
@@ -20,7 +18,6 @@ export const metadata: Metadata = {
     canonical: "https://wordsfromlife.com/",
   }
 }
-
 
 export default async function Home() {
   const authorsData = await getAuthors();

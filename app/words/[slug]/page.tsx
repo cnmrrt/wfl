@@ -71,12 +71,15 @@ export default async function country({ params }: { params: { slug: string } }) 
             <main className='author-detail-main' key={item.id}>
               <h1>{item.word}</h1>
               <div id='main-image'>
-                <img
-                  src={item.img}
-                  alt={item.word}
-                  width={item.img_width}
-                  height={item.img_height}
-                />
+                {item.img !== "" && item.img != null ?
+                  (
+                    <img
+                      src={item.img}
+                      alt={item.word}
+                      width={item.img_width}
+                      height={item.img_height}
+                    />
+                  ) : null}
               </div>
               <div dangerouslySetInnerHTML={{ __html: item.content }} />
             </main>
