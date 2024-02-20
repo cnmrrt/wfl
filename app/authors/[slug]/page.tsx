@@ -49,16 +49,23 @@ export async function generateMetadata(
 export default async function authors({ params }: { params: { slug: string } }) {
     const data = await getData()
     const filteredData = data.filter((item: any) => (item.id).toLowerCase() + "-quotes" === params.slug);
+    const name = filteredData[0].name;
+    const surname = filteredData[0].surname;
 
-    // const breadcrumbSchema = {
-    //     "@context": "https://schema.org",
-    //     "@type": "BreadcrumbList",
-    //     "itemListElement": [{
-    //         "@type": "ListItem",
-    //         "position": 1,
-    //         "name": country + " Map, Flag, Language and Info"
-    //     }]
-    // }
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Authors",
+            "item": "https://wordsfromlife.com/authors"
+        },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": name + " " + surname + " Quotes"
+          }]
+    }
 
     return (
         <html lang='en'>
@@ -90,10 +97,10 @@ export default async function authors({ params }: { params: { slug: string } }) 
                         </main>
                     ))}
                 </div>
-                {/* <script
+                <script
                         type="application/ld+json"
                         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-                    /> */}
+                    />
             </body>
         </html>
     )
