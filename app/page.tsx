@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Script from 'next/script'
 import Navbar from './components/navbar';
 import type { Metadata } from 'next';
-// import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 
 
@@ -26,8 +26,11 @@ export default async function Home() {
 
   return (
     <html lang="en">
-      <body>
+      <head>
         <Script src="/static/js/macy.js" />
+      </head>
+      <body>
+      <GoogleTagManager gtmId="GTM-TKDV62Q" />
         <Navbar />
         <main className="main" role="main">
           <h1>Words From Life</h1>
@@ -40,15 +43,15 @@ export default async function Home() {
                       (
                         <div className="demo" key={item.id}>
                           <Link href={"/authors/" + item.id + "-quotes"}>
-                          <img
-                            src={item.img}
-                            alt={item.name + ' ' + item.surname}
-                            width={item.img_width}
-                            height={item.img_height} />
-                          <span style={{ display: 'block', textAlign: 'center', padding: '.2rem 0' }}>
-                            {item.name} {item.surname}
-                          </span>
-                        </Link></div>
+                            <img
+                              src={item.img}
+                              alt={item.name + ' ' + item.surname}
+                              width={item.img_width}
+                              height={item.img_height} />
+                            <span style={{ display: 'block', textAlign: 'center', padding: '.2rem 0' }}>
+                              {item.name} {item.surname}
+                            </span>
+                          </Link></div>
                       ) : null
                   )
                 }
@@ -70,15 +73,15 @@ export default async function Home() {
             <section className="section">
               <h2 style={{ fontSize: '40px', textAlign: 'center', margin: '3rem 0 2rem 0' }}>Preverbs</h2>
               <div id={'preverbs-container'}>
-                  {
-                    preverbsData.map((item: any) =>
-                    (
-                      <div className="demo" key={item.id}><Link href={"/preverbs/" + item.id}>
-                        <span>{item.preverb}</span>
-                      </Link></div>
-                    )
-                    )
-                  }
+                {
+                  preverbsData.map((item: any) =>
+                  (
+                    <div className="demo" key={item.id}><Link href={"/preverbs/" + item.id}>
+                      <span>{item.preverb}</span>
+                    </Link></div>
+                  )
+                  )
+                }
               </div></section>
           </div>
         </main>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata, ResolvingMetadata } from 'next'
-// import { GoogleTagManager } from '@next/third-parties/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 import Navbar from '../../components/navbar';
 
 type Props = {
@@ -64,7 +64,7 @@ export default async function country({ params }: { params: { slug: string } }) 
   return (
     <html lang='en'>
       <body>
-        {/* <GoogleTagManager gtmId="GTM-PDHR5KXB" /> */}
+        <GoogleTagManager gtmId="GTM-TKDV62Q" />
         <Navbar />
         <div className='author-detail-container'>
           {filteredData.map((item: any) => (
