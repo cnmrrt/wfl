@@ -25,7 +25,8 @@ module.exports = {
                 source: "/en/benjamin-franklin-quotes",
                 destination: "/authors/benjamin-franklin-quotes",
                 "statusCode": 301,
-            }, {
+            },
+            {
                 source: "/benjamin-franklin-quotes",
                 destination: "/authors/benjamin-franklin-quotes",
                 "statusCode": 301,
@@ -192,11 +193,6 @@ module.exports = {
             {
                 source: "/virginia-woolf-quotes",
                 destination: "/authors/virginia-woolf-quotes",
-                "statusCode": 301,
-            },
-            {
-                source: "https://words-from-life-5cb26.web.app/",
-                destination: "https://wordsfromlife.com/",
                 "statusCode": 301,
             }
         ]
