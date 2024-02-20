@@ -12,8 +12,34 @@ export async function generateMetadata(
     parent: ResolvingMetadata
 ): Promise<Metadata> {
 
+    const data = await getData()
+    const filteredData = data.filter((item: any) => (item.id).toLowerCase() + "-quotes" === params.slug);
+    const name = filteredData[0].name;
+    const surname = filteredData[0].surname;
+    const img = filteredData[0].img;
+    const img_width = filteredData[0].img_width;
+    const img_height = filteredData[0].img_height;
+
     return {
-        title: "Word",
+        title: name + " " + surname + " Quotes",
+        description: "",
+        alternates: {
+            canonical: "https://wordsfromlife.com/authors/"+ name.toLowerCase() + "-" + surname.toLowerCase() +"-quotes",
+        },
+        openGraph: {
+            title: name + " " + surname + " Quotes",
+            description: "",
+            url: "https://wordsfromlife.com/authors/"+ name.toLowerCase() + "-" + surname.toLowerCase() +"-quotes",
+            siteName: 'Words From Life',
+            images: [
+                {
+                    url: img,
+                    width: img_width,
+                    height: img_height,
+                  }
+                ],
+            type: 'website',
+          },
     }
 }
 
