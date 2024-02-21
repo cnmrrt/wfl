@@ -13,9 +13,14 @@ export const metadata: Metadata = {
     canonical: "https://wordsfromlife.com/words",
   }
 }
-
 export default async function Words() {
   const wordsData = await getWords();
+  const sortedData = wordsData.sort((a: any, b: any) => {
+    if (a.word < b.word) {
+      return -1;
+    }
+  });
+
   return (
     <html lang="en">
       <head>
@@ -30,7 +35,7 @@ export default async function Words() {
             <section className="section">
               <ul>
                 {
-                  wordsData.map((item: any) =>
+                  sortedData.map((item: any) =>
                   (
                     <li className="" key={item.id}><Link href={"/words/" + item.id}>{item.word}</Link></li>
                   )
