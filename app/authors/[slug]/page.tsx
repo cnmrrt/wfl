@@ -90,10 +90,6 @@ export default async function authors({ params }: { params: { slug: string } }) 
                                 ))}
                             </ul>
                             <span style={{ display: 'block', textAlign: 'center' }}>{item.born}  - {item.dead}</span>
-                            <div>
-
-
-                            </div>
                         </main>
                     ))}
                 </div>
