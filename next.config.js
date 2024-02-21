@@ -199,6 +199,11 @@ module.exports = {
                 source: "/wolfgang-amadeus-mozart-quotes",
                 destination: "/authors/wolfgang-amadeus-mozart-quotes",
                 "statusCode": 301,
+            },
+            {
+                source: "/michel-de-montaigne-quotes",
+                destination: "/authors/michel-de-montaigne-quotes",
+                "statusCode": 301,
             }
         ]
     },
