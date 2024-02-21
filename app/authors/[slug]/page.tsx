@@ -20,10 +20,10 @@ export async function generateMetadata(
     const img = "https://wordsfromlife.com" + filteredData[0].img;
     const img_width = filteredData[0].img_width;
     const img_height = filteredData[0].img_height;
-
+    const en_desc = filteredData[0].en_meta_desc;
     return {
         title: name + " " + surname + " Quotes",
-        description: "",
+        description: en_desc,
         alternates: {
             canonical: "https://wordsfromlife.com/authors/" + name.toLowerCase() + "-" + surname.toLowerCase() + "-quotes",
         },
