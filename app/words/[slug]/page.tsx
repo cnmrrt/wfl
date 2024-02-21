@@ -58,7 +58,7 @@ export default async function country({ params }: { params: { slug: string } }) 
       "@type": "ListItem",
       "position": 1,
       "name": "Words",
-      "item": "https://wordsfromlife.com/authors"
+      "item": "https://wordsfromlife.com/words"
     }, {
       "@type": "ListItem",
       "position": 2,
