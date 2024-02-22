@@ -16,7 +16,10 @@ export const metadata: Metadata = {
   description: '',
   alternates: {
     canonical: "https://wordsfromlife.com/",
-  }
+  },
+  verification: {
+    yandex: '393187ce66b07320'
+  },
 }
 
 export default async function Home() {
