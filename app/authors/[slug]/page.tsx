@@ -60,11 +60,11 @@ export default async function authors({ params }: { params: { slug: string } }) 
             "position": 1,
             "name": "Authors",
             "item": "https://wordsfromlife.com/authors"
-        },{
+        }, {
             "@type": "ListItem",
             "position": 2,
             "name": name + " " + surname + " Quotes"
-          }]
+        }]
     }
 
     return (
@@ -94,9 +94,9 @@ export default async function authors({ params }: { params: { slug: string } }) 
                     ))}
                 </div>
                 <script
-                        type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-                    />
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+                />
             </body>
         </html>
     )
