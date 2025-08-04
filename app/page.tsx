@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   verification: {
     yandex: '393187ce66b07320'
   },
+  other: {
+    'google-adsense-account': 'ca-pub-5581015881313741',
+  }
 }
 
 export default async function Home() {
