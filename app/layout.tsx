@@ -6,6 +6,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (<>{children}</>
+   <html lang="en">
+      <Head>
+        <meta name="google-adsense-account" content="ca-pub-5581015881313741" />
+      </Head>
+      <body>{children}</body>
+    </html>
   );
 }
+
+
