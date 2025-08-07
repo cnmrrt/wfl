@@ -13,10 +13,24 @@ async function getPreverbs() { const res = await fetch('https://words-from-life-
 
 export const metadata: Metadata = {
   title: 'Words From Life',
-  description: '',
+  description: 'All words about life here, visit now!',
   alternates: {
     canonical: "https://wordsfromlife.com/",
   },
+  openGraph: {
+            title: "Words From Life",
+            description: "All words about life here, visit now!",
+            url: "https://wordsfromlife.com/",
+            siteName: 'Words From Life',
+            images: [
+                {
+                    url: "",
+                    width: "",
+                    height: "",
+                }
+            ],
+            type: 'website',
+        },
   verification: {
     yandex: '393187ce66b07320'
   },
