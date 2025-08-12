@@ -25,12 +25,12 @@ export async function generateMetadata(
         title: name + " " + surname + " Quotes",
         description: en_desc,
         alternates: {
-            canonical: "https://wordsfromlife.com/authors/" + name.toLowerCase() + "-" + surname.toLowerCase() + "-quotes",
+            canonical: "https://wordsfromlife.com/authors/" + item.id + "-quotes",
         },
         openGraph: {
             title: name + " " + surname + " Quotes",
             description: "",
-            url: "https://wordsfromlife.com/authors/" + name.toLowerCase() + "-" + surname.toLowerCase() + "-quotes",
+            url: "https://wordsfromlife.com/authors/" + item.id + "-quotes",
             siteName: 'Words From Life',
             images: [
                 {
