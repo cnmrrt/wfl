@@ -104,7 +104,7 @@ footer {
 
 
 
-.words-container ul, .proverb-container ul {padding: 0 !important, text-align: center;}
+.words-container ul, .proverb-container ul {padding: 0 !important; text-align: center;}
 .words-container ul li, .proverb-container ul li {display: inline-block; margin: 10px 20px;}
 
 @media (min-width:768px) {
