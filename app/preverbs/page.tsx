@@ -25,8 +25,8 @@ export default async function Preverbs() {
         <GoogleTagManager gtmId="GTM-TKDV62Q" />
         <Navbar />
         <main className="main" role="main">
-          <h1>Preverbs</h1>
-          <div className="home-container">
+          <h1>Proverbs</h1>
+          <div className="home-container proverb-container">
             <section className="section">
               <ul>
                 {
