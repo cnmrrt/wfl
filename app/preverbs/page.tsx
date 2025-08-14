@@ -7,7 +7,7 @@ import { GoogleTagManager } from '@next/third-parties/google';
 async function getPreverbs() { const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/idioms%20and%20proverbs/en/preverbs.json'); if (!res.ok) { throw new Error('Failed to fetch data') } return res.json() }
 
 export const metadata: Metadata = {
-  title: 'Preverbs',
+  title: 'Proverbs',
   description: '',
   alternates: {
     canonical: "https://wordsfromlife.com/preverbs",
