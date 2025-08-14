@@ -31,7 +31,7 @@ export default async function Words() {
         <Navbar />
         <main className="main" role="main">
           <h1>Words</h1>
-          <div className="home-container">
+          <div className="home-container words-container">
             <section className="section">
               <ul>
                 {
