@@ -102,6 +102,12 @@ footer {
     font-weight: 600;
 }
 
+
+
+.word-container ul, .proverb-container ul {padding: 0 !important}
+.word-container ul li, .proverb-container ul li {display: inline-block; margin: 10px 20px;}
+.proverb-container ul {text-align: center;}
+
 @media (min-width:768px) {
     #navbar {
         justify-content: center;
