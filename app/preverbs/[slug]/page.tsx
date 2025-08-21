@@ -25,12 +25,12 @@ export async function generateMetadata(
         title: preverb,
         description: desc,
         alternates: {
-            canonical: "https://wordsfromlife.com/preverbs/" + preverb,
+            canonical: "https://wordsfromlife.com/preverbs/" + filteredData[0].id,
         },
         openGraph: {
             title: preverb,
             description: desc,
-            url: "https://wordsfromlife.com/preverbs/" + preverb,
+            url: "https://wordsfromlife.com/preverbs/" + filteredData[0].id,
             siteName: 'Words From Life',
             images: [
                 {
