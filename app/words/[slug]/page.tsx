@@ -90,11 +90,7 @@ export default async function country({ params }: { params: { slug: string } }) 
               <div id="related-words">
                 <span id="related-words-title">Related Words</span>
                 <ul id="related-words-list">
-                  {item.related_words.map((subItem: any, index: any) => (
-                         <li>
-                           <a href={'https://wordsfromlife.com/words/' + subItem.toLowerCase()} key={index} dangerouslySetInnerHTML={{ __html: subItem }}/>
-                          </li>
-                   ))}
+                
                 </ul>
               </div> 
             </main>
