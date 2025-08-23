@@ -89,7 +89,6 @@ export default async function country({ params }: { params: { slug: string } }) 
               <div className='section' dangerouslySetInnerHTML={{ __html: item.content }} />
               
              
-                )}
             </main>
           ))}
         </div>
