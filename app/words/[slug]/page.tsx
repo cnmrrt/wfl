@@ -86,10 +86,9 @@ export default async function country({ params }: { params: { slug: string } }) 
                     />
                   ) : null}
               </div>
-              <div className='section' dangerouslySetInnerHTML={{ __html: item.content }} />
-              
-             
+              <div dangerouslySetInnerHTML={{ __html: item.content }} />
             </main>
+
           ))}
         </div>
         <script
@@ -100,5 +99,4 @@ export default async function country({ params }: { params: { slug: string } }) 
     </html>
   )
 }
-
 
