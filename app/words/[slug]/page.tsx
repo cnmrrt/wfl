@@ -88,20 +88,7 @@ export default async function country({ params }: { params: { slug: string } }) 
               </div>
               <div className='section' dangerouslySetInnerHTML={{ __html: item.content }} />
               
-              {Array.isArray(item?.related_words) && item.related_words.length > 0 && (
-                  <div id="related-words">
-                    <span id="related-words-title">Related Words</span>
-                    <ul id="related-words-list">
-                      {item.related_words.map((subItem: string, index: number) => (
-                        <li key={index}>
-                          <a
-                            href={`https://wordsfromlife.com/words/${subItem.toLowerCase()}`}
-                            dangerouslySetInnerHTML={{ __html: subItem }}
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+             
                 )}
             </main>
           ))}
