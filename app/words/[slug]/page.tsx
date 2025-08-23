@@ -86,12 +86,13 @@ export default async function country({ params }: { params: { slug: string } }) 
                     />
                   ) : null}
               </div>
+              <div>
+                  {item.related_words.map((subItem: any, index: any) => (
+                         <div key={index} dangerouslySetInnerHTML={{ __html: subItem }}></div>
+                   ))}
+              </div>
               <div dangerouslySetInnerHTML={{ __html: item.content }} />
             </main>
-
-
-      
-
           ))}
         </div>
         <script
