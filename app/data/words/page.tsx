@@ -108,7 +108,6 @@ export default function Firebasedata() {
                                                 word: wordInTable.innerHTML,
                                                 content: contentInTable.innerHTML,
                                                 meta_desc: en_meta_descInTable.innerHTML,
-
                                                 // pictures: item.pictures != "" && item.pictures != null ? (item.pictures) : [""]
 
                                             };
