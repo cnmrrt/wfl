@@ -75,7 +75,7 @@ export default function Firebasedata() {
                     </thead>
                     <tbody>
                         {listData.map((item: any, key: any) => (
-                            <tr>
+                            <tr key={item.id}>
                                 <td>{Object.keys(dataArray)[key]}</td>
                                 <td id={Object.keys(dataArray)[key] + "id"}>{item.id}</td>
                                 <td contentEditable="true" id={Object.keys(dataArray)[key] + "word"}>{item.word}</td>

@@ -21,10 +21,10 @@ export default async function Authors() {
   return (
     <html lang="en">
       <head>
-      <Script src="/static/js/macy.js" />
+        <Script src="/static/js/macy.js" />
       </head>
       <body>
-      <GoogleTagManager gtmId="GTM-TKDV62Q" />
+        <GoogleTagManager gtmId="GTM-TKDV62Q" />
         <Navbar />
         <main className="main" role="main">
           <h1>Quotes by Authors</h1>
@@ -42,9 +42,7 @@ export default async function Authors() {
                               alt={item.name + ' ' + item.surname}
                               width={item.img_width}
                               height={item.img_height} />
-                            <span style={{ display: 'block', textAlign: 'center', padding: '.2rem 0' }}>
-                              {item.name} {item.surname}
-                            </span>
+                            <span style={{ display: 'block', textAlign: 'center', padding: '.2rem 0' }}>{item.name} {item.surname}</span>
                           </Link></div>
                       ) : null
                   )
