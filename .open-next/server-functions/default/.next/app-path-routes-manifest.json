@@ -3,12 +3,12 @@
   "/favicon.ico/route": "/favicon.ico",
   "/sitemap.xml/route": "/sitemap.xml",
   "/robots.txt/route": "/robots.txt",
+  "/data/words/page": "/data/words",
   "/preverbs/[slug]/page": "/preverbs/[slug]",
   "/authors/[slug]/page": "/authors/[slug]",
   "/words/[slug]/page": "/words/[slug]",
-  "/data/words/page": "/data/words",
-  "/authors/page": "/authors",
   "/page": "/",
   "/preverbs/page": "/preverbs",
-  "/words/page": "/words"
+  "/words/page": "/words",
+  "/authors/page": "/authors"
 }
