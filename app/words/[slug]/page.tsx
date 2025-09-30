@@ -4,7 +4,7 @@ import { GoogleTagManager } from '@next/third-parties/google';
 import Navbar from '../../components/navbar';
 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 async function getData() {
@@ -15,10 +15,8 @@ async function getData() {
   return res.json()
 }
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata(props: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const params = await props.params;
 
   const data = await getData()
   const filteredData = data.filter((item: any) => (item.id).toLowerCase() === params.slug);
@@ -47,7 +45,8 @@ export async function generateMetadata(
 }
 
 
-export default async function country({ params }: { params: { slug: string } }) {
+export default async function country(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
   const data = await getData()
   const filteredData = data.filter((item: any) => (item.id).toLowerCase() === params.slug);
   const word = filteredData[0].word;
