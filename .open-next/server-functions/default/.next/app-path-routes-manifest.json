@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/robots.txt/route": "/robots.txt",
+  "/preverbs/[slug]/page": "/preverbs/[slug]",
+  "/authors/[slug]/page": "/authors/[slug]",
+  "/words/[slug]/page": "/words/[slug]",
+  "/data/words/page": "/data/words",
+  "/authors/page": "/authors",
+  "/page": "/",
+  "/preverbs/page": "/preverbs",
+  "/words/page": "/words"
+}
