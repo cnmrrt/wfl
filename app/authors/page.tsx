@@ -38,7 +38,7 @@ export default async function Authors() {
                       (
                         <div className="demo" key={item.id}>
                           <Link href={"/authors/" + item.id + "-quotes"}>
-                          
+
                             <img
                               src={item.img}
                               alt={item.name + ' ' + item.surname}
