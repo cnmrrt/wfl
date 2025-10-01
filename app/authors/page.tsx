@@ -19,7 +19,7 @@ export default async function Authors() {
 
   const authorsData = await getAuthors();
   return (
-    <html lang="en">
+    <html lang="en"> 
       <head>
         <Script src="/static/js/macy.js" />
       </head>
