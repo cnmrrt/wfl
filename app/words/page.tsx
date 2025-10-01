@@ -33,6 +33,7 @@ export default async function Words() {
         <main className="main" role="main">
           <h1>Words</h1>
           <div className="home-container words-container">
+          
             <section className="section">
               <ul>
                 {
