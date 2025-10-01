@@ -29,6 +29,10 @@ jobs:
 
       - name: Build OpenNext bundle
         run: npm run cf:build
+        env:
+          # pass secrets into the build step so Next.js / Workers code can use them
+          API_KEY: ${{ secrets.API_KEY }}
+          SOME_OTHER_SECRET: ${{ secrets.SOME_OTHER_SECRET }}
 
       - name: Create R2 bucket (idempotent)
         run: |
@@ -36,4 +40,8 @@ jobs:
 
       - name: Deploy to Cloudflare Workers
         run: npm run cf:deploy
-
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          API_KEY: ${{ secrets.API_KEY }}
+          SOME_OTHER_SECRET: ${{ secrets.SOME_OTHER_SECRET }}
