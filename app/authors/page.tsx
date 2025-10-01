@@ -30,6 +30,7 @@ export default async function Authors() {
           <h1>Quotes by Authors</h1>
           <div className="home-container">
             <section className="section">
+            
               <div id="macy-container">
                 {
                   authorsData.map((item: any) =>

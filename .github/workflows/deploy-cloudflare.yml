@@ -45,3 +45,4 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           API_KEY: ${{ secrets.API_KEY }}
           SOME_OTHER_SECRET: ${{ secrets.SOME_OTHER_SECRET }}
+
