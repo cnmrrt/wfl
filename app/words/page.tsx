@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     canonical: "https://wordsfromlife.com/words",
   }
 }
+
 export default async function Words() {
   const wordsData = await getWords();
   const sortedData = wordsData.sort((a: any, b: any) => {
@@ -20,7 +21,7 @@ export default async function Words() {
       return -1;
     }
   });
-  
+
   return (
     <html lang="en">
       <head>
