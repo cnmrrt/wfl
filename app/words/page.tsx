@@ -20,7 +20,7 @@ export default async function Words() {
       return -1;
     }
   });
-
+  
   return (
     <html lang="en">
       <head>
