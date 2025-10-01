@@ -1,14 +1,14 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/data/words/page": "app/data/words/page.js",
-  "/preverbs/[slug]/page": "app/preverbs/[slug]/page.js",
   "/authors/[slug]/page": "app/authors/[slug]/page.js",
+  "/preverbs/[slug]/page": "app/preverbs/[slug]/page.js",
   "/words/[slug]/page": "app/words/[slug]/page.js",
-  "/page": "app/page.js",
+  "/authors/page": "app/authors/page.js",
   "/preverbs/page": "app/preverbs/page.js",
-  "/words/page": "app/words/page.js",
-  "/authors/page": "app/authors/page.js"
+  "/page": "app/page.js",
+  "/words/page": "app/words/page.js"
 }
