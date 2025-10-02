@@ -1,6 +1,6 @@
 {
   "main": ".open-next/worker.js",
-  "name": "wordsfromlife",
+  "name": "wfl",
   "compatibility_date": "2025-09-30",
   "compatibility_flags": [
     "nodejs_compat"
