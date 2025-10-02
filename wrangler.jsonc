@@ -1,7 +1,0 @@
-{
-  "name": "wfl",
-  "compatibility_date": "2025-10-02",
-  "assets": {
-    "directory": "./.next/static"
-  }
-}
