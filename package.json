@@ -6,14 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "cf:build": "opennextjs-cloudflare build && node scripts/fix-headers.js",
-    "cf:preview": "opennextjs-cloudflare build && node scripts/fix-headers.js && opennextjs-cloudflare preview",
-    "cf:deploy": "opennextjs-cloudflare build && node scripts/fix-headers.js && opennextjs-cloudflare deploy"
+    "lint": "next lint"
   },
   "dependencies": {
     "@next/third-parties": "^15.5.4",
-    "@opennextjs/cloudflare": "^1.9.0",
     "firebase": "^12.2.1",
     "next": "^15.5.2",
     "react": "19.1.1",
@@ -31,14 +27,10 @@
     "eslint-config-next": "15.5.4",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5",
-    "wrangler": "^4.40.3"
+    "typescript": "^5"
   },
   "overrides": {
     "@types/react": "19.1.16",
     "@types/react-dom": "19.1.9"
-  },
-  "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-  "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-  "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+  }
 }
