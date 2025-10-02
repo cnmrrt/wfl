@@ -1,3 +1,11 @@
+export async function generateStaticParams() {
+  const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/words.json');
+  if (!res.ok) throw new Error('Failed to fetch data');
+  const data = await res.json();
+  return data
+    .filter((item: any) => item.word && item.id)
+    .map((item: any) => ({ slug: (item.id).toLowerCase() }));
+}
 import Link from 'next/link';
 import type { Metadata, ResolvingMetadata } from 'next'
 import { GoogleTagManager } from '@next/third-parties/google';
