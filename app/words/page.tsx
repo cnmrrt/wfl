@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   }
 }
 
+
 export default async function Words() {
   const wordsData = await getWords();
   const sortedData = wordsData.sort((a: any, b: any) => {
