@@ -32,6 +32,10 @@ export default {
                     ? fetch(imageUrl, { cf: { cacheEverything: true } })
                     : env.ASSETS?.fetch(new URL(`/${imageUrl}`, url));
             }
+
+            const headers = new Headers();
+            headers.set("Authorization", `Bearer ${env.MY_API_KEY.trim()}`);
+            headers.set("Content-Type", "application/json");
             // Fallback for the Next default image loader.
             if (url.pathname ===
                 `${globalThis.__NEXT_BASE_PATH__}/_next/image${globalThis.__TRAILING_SLASH__ ? "/" : ""}`) {
