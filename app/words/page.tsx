@@ -6,6 +6,7 @@ import { GoogleTagManager } from '@next/third-parties/google';
 
 async function getWords() { const res = await fetch('https://words-from-life-5cb26-default-rtdb.firebaseio.com/words.json'); if (!res.ok) { throw new Error('Failed to fetch data') } return res.json() }
 
+
 export const metadata: Metadata = {
   title: 'List of Words',
   description: '',
