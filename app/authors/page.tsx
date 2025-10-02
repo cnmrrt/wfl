@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 
 export default async function Authors() {
 
+  
   const authorsData = await getAuthors();
   return (
     <html lang="en"> 
